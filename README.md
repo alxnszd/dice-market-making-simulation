@@ -18,7 +18,7 @@ P(Sum = 7) = 6/36 = 1/6
 
 Therefore, the theoretical fair value of the contract is:
 
-FV = 1(1/6) + 0(5/6) = $0.1667
+FV = $1 (1/6) + $0 (5/6) = $0.1667
 
 The market maker sets bid and ask prices around fair value:
 
