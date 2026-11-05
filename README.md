@@ -45,7 +45,8 @@ A total of 10 million rounds are simulated for each spread width.
 
 ## Simulation Results
 
-[Market Sim Records.xlsx](https://github.com/user-attachments/files/34286145/Market.Sim.Records.xlsx)
+[Market Sim Records (1).xlsx](https://github.com/user-attachments/files/34440936/Market.Sim.Records.1.xlsx)
+
 
 ## Visualizations 
 <img width="982" height="576" alt="image" src="https://github.com/user-attachments/assets/a695cf4c-48d4-4cf4-a885-48a91528abe5" />
@@ -55,23 +56,21 @@ A total of 10 million rounds are simulated for each spread width.
 
 ## Key Observations
 
-- Increasing the spread increases the market maker's expected profit per executed trade.
-- Increasing the spread also reduces the probability of customer acceptance.
-- Total P&L follows an approximately inverted-U relationship with spread width.
-- The highest observed total P&L occurred at a spread width of $0.06.
+- Wider spreads increase expected profit per executed trade because bid and ask prices move farther from fair value. Under the model's assumptions, expected profit per trade equals half the quoted spread.
+- Increasing the spread reduces customer trade frequency, creating a trade-off between profit per trade and trading volume.
+- Total P&L follows a nonlinear, inverted-U relationship with spread width because the increase in profit per trade must be weighed against the reduction in trade frequency.
+- Spreads of $0.05 and $0.06 produce the same theoretical maximum expected P&L, despite having different trade frequencies.
 - Simulated trade rates closely matched their theoretical expectations.
-- Average simulated P&L per executed trade approaches half the quoted spread, consistent with the model's theoretical expected profit per trade.
-
-The theoretical expected total P&L is maximized at spread widths of $0.05 and $0.06 under the assumptions of this model. Small differences in observed P&L are attributable to randomness.
+- The highest observed total P&L occurred at a spread width of $0.06. Small differences between observed and theoretical results are attributable to randomness.
 
 ## Limitations and Assumptions
 
-This is a simplified educational simulation, not a realistic market-making system.
+This is an educational simulation, not a realistic market-making system.
 
 The model assumes:
 
 - Customer buy/sell decisions are equally likely.
-- Customer trading decisions are independent of the eventual contract outcome.
+- Customer trading decisions are independent of the dice outcome.
 - There are no transaction fees.
 - Contracts are settled immediately after each trade, so the market maker does not accumulate outstanding inventory or face inventory risk between rounds.
 - The market maker knows the theoretical fair value.
