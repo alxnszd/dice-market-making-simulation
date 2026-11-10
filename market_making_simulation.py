@@ -45,18 +45,18 @@ theoretical_trade_rate = (11 - (spread_width*100))*10
 for i in range (10000000):
 
     decision = customer()
-    outcome = twodice()
+    
     if decision == "buy":
         cash+=ask
         trade += 1
-        if outcome == "pay":
+        if twodice() == "pay":
             cash -= 1
 
     elif decision == "sell":
         cash -= bid
         trade += 1
 
-        if outcome == "pay":
+        if twodice() == "pay":
             cash += 1
 
 print("Total P&L:", round(cash, 3))
